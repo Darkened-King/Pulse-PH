@@ -22,17 +22,7 @@ export default function Home() {
   >([
     {
       role: "system",
-      content: `# Welcome to Your Social Media Assistant! 👋
-
-I can help you manage your social media accounts in several ways:
-
-## What I can do:
-- Create draft social media posts for you
-- Publish social media posts
-- Reply to messages on your behalf
-- Schedule social media posts for publishing (work in progress)
-
-## Click on the buttons below to easily get started!`,
+      content: `Hello there! 👋`,
     },
   ]);
   const [input, setInput] = useState("");
@@ -113,7 +103,7 @@ I can help you manage your social media accounts in several ways:
     <div className="flex min-h-screen items-center justify-center p-4 bg-muted/40">
       <Card className="w-full max-w-3xl h-[80vh] flex flex-col">
         <CardHeader>
-          <CardTitle className="text-center">Social Media Chat</CardTitle>
+          <CardTitle className="text-center">AI4Devs Simple Chat</CardTitle>
         </CardHeader>
         <CardContent className="flex-1 overflow-hidden">
           <ScrollArea className="h-full pr-4">
@@ -133,7 +123,7 @@ I can help you manage your social media accounts in several ways:
                             AI
                           </div>
                         </Avatar>
-                        {index === 0 && !hasInteracted && (
+                        {/* {index === 0 && !hasInteracted && (
                           <div className="absolute mt-[280px] flex gap-2 flex-wrap max-w-[600px]">
                             <Button
                               variant="outline"
@@ -160,7 +150,7 @@ I can help you manage your social media accounts in several ways:
                               🗓️ Schedule Posts
                             </Button>
                           </div>
-                        )}
+                        )} */}
                       </>
                     )}
                     <div
