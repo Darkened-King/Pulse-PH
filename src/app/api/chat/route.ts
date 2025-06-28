@@ -11,7 +11,7 @@ export async function POST(request: Request) {
     // Simple response logic
     // let response = "Thanks for your message! This is a demo response.";
 
-    const response = await fetch(process.env.CHAT_WEBHOOK_URL, {
+    const response = await fetch("http://localhost:5678/webhook/291a9aff-7226-4cd1-a3ba-d6ffa5e5a3e6", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -20,23 +20,7 @@ export async function POST(request: Request) {
     }).then((res) => res.json());
     console.log("🚀 ~ POST ~ response:", response);
 
-    // if (
-    //   message.toLowerCase().includes("hello") ||
-    //   message.toLowerCase().includes("hi")
-    // ) {
-    //   response = "Hello there! How can I help you today?";
-    // } else if (message.toLowerCase().includes("help")) {
-    //   response = "I'm here to help! What do you need assistance with?";
-    // } else if (
-    //   message.toLowerCase().includes("feature") ||
-    //   message.toLowerCase().includes("capabilities")
-    // ) {
-    //   response =
-    //     "This chat app demonstrates a basic social media chat interface using Next.js and shadcn/ui components. In a real application, it would connect to an AI service or backend API.";
-    // }
-
-    // Simulate a delay to make the chat feel more natural
-    // await new Promise((resolve) => setTimeout(resolve, 1000));
+    
 
     return NextResponse.json({ message: response?.output }, { status: 200 });
   } catch (error) {
